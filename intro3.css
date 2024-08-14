@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #1a202c;
+    color: #e2e8f0;
+    margin: 0;
+    padding: 0;
+}
+
+.text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+}
+
+.text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+}
+
+.bg-gray-800 {
+    background-color: #2d3748;
+}
+
+.bg-gray-700 {
+    background-color: #4a5568;
+}
+
+.bg-gray-900 {
+    background-color: #1a202c;
+}
+
+.bg-teal-500 {
+    background-color: #38b2ac;
+}
+
+.bg-teal-400 {
+    background-color: #319795;
+}
+
+.text-gray-400 {
+    color: #e2e8f0;
+}
+
+.hover\:bg-teal-400:hover {
+    background-color: #319795;
+}
+
+.transition {
+    transition: all 0.2s ease-in-out;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.rounded-lg {
+    border-radius: 0.5rem;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.mb-4 {
+    margin-bottom: 1rem;
+}
+
+.mb-6 {
+    margin-bottom: 1.5rem;
+}
+
+.mt-4 {
+    margin-top: 1rem;
+}
+
+.mt-6 {
+    margin-top: 1.5rem;
+}
+
+.mt-8 {
+    margin-top: 2rem;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.relative {
+    position: relative;
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.slide-in {
+    animation: slideIn 0.5s ease-out;
+}
+
+@keyframes slideIn {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.slide-out {
+    animation: slideOut 0.5s ease-in;
+}
+
+@keyframes slideOut {
+    from { transform: translateY(0); opacity: 1; }
+    to { transform: translateY(-20px); opacity: 0; }
+}
+
+.decorative-border {
+    border: 2px solid #38b2ac;
+    border-radius: 10px;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.5);
+    margin-bottom: 1.5rem;
+}
+
+.shadow-lg {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.shadow-lg:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+.slider {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+    border-radius: 8px;
+    margin-bottom: 1rem; /* Reduced space between the slide and text */
+}
+
+.slider img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slider-controls {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+}
+
+.slider-controls button {
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.slider-controls button:hover {
+    background: rgba(0, 0, 0, 0.8);
+}

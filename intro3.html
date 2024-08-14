@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction Page</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
+    <link href="https://unpkg.com/tailwindcss@^2.0/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: #f3f4f6;
+            background-color: #1f2937;
+        }
+
+        .fade-in {
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .slide {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        .slide.active {
+            opacity: 1;
+        }
+
+        .slider {
+            position: relative;
+            width: 100%;
+            height: 800px;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+
+        .slider img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 1s ease-in-out;
+        }
+
+        .slider img:hover {
+            transform: scale(1.1);
+        }
+
+        .slider-controls {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            justify-content: space-between;
+            width: 60%;
+        }
+
+        .slider-controls button {
+            background: rgba(0, 0, 0, 0.5);
+            border: none;
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 1.5rem;
+        }
+
+        .slider-controls button:hover {
+            background: rgba(0, 0, 0, 0.8);
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #d1d5db;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .explore-btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            font-size: 1rem;
+            font-weight: 600;
+            color: #ffffff;
+            background-color: #4f46e5;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .explore-btn:hover {
+            background-color: #4338ca;
+            transform: scale(1.05);
+        }
+
+        .card {
+            background-color: #374151;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .card img {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 1rem;
+        }
+
+        .card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .card p {
+            font-size: 1rem;
+        }
+        @keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.slide-in {
+    animation: slideIn 0.8s ease-out;
+}
+    </style>
+</head>
+<body>
+    <section id="about" class="flex items-center justify-center min-h-screen bg-gray-800 p-8 relative slide-in">
+        <div class="text-center z-10 relative">
+            <span class="typed-1 text-4xl font-bold mb-4 fade-in"></span>
+            <p class="text-xl mb-6 fade-in">Hi, I'm Jovan! This is an introduction about my friends and their hobbies.</p>
+            <p class="text-lg mb-6 fade-in">Hello! My name is Catherine, and I'm a 15-year-old girl born on April 17th. I live in Komplek Jundul Baru. I have a passion for several activities, including playing games, swimming, and badminton. My favorite subject is Physical Education (PJOK). Currently, I'm single and enjoying my time exploring these hobbies..</p>
+            <div class="relative w-full h-96 overflow-hidden rounded-lg shadow-lg mb-8 slider">
+                <div class="slide active">
+                    <img src="cath1.jpg" alt="Image 1">
+                </div>
+                <div class="slide">
+                    <img src="cath2.jpg" alt="Image 2">
+                </div>
+                <div class="slide">
+                    <img src="cath3.jpg" alt="Image 3">
+                </div>
+                <div class="slider-controls">
+                    <button id="prev-slide">&#10094;</button>
+                    <button id="next-slide">&#10095;</button>
+                </div>
+            </div>
+            <a href="#hobbies" class="explore-btn" id="scroll-to-hobbies">Hobbies</a>
+        </div>
+    </section>
+
+    <section id="hobbies" class="min-h-screen bg-gray-700 p-8 hidden">
+        <div class="container mx-auto">
+            <h2 class="section-title mb-6 text-center">Her Hobbies</h2>
+            <div class="text-center mb-8 fade-in">
+                <p class="text-lg">Here are some of her favorite activities and hobbies that her love to spend time on. Each hobby reflects a part of who she is and what she enjoy doing in her free time.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="card">
+                    <img src="gaming.jpeg" alt="cooking" class="mx-auto mb-4">
+                    <h3 class="text-2xl font-semibold">Gaming</h3>
+                    <p class="text-lg mt-2">Gaming is a fun and engaging hobby that allows Catherine to dive into different worlds and stories. Whether she's solving puzzles, competing in challenges, or exploring new virtual landscapes, gaming offers endless entertainment and a great way to unwind..</p>
+                </div>
+                <div class="card">
+                    <img src="swim.jpeg" alt="Swimming" class="mx-auto mb-4">
+                    <h3 class="text-2xl font-semibold">Swimming</h3>
+                    <p class="text-lg mt-2">Swimming is a refreshing and invigorating hobby for Catherine. It not only helps her stay fit and healthy but also provides a relaxing escape. Whether she's swimming laps or enjoying a leisurely float, the water is a place where she finds both physical exercise and mental relaxation..</p>
+                </div>
+                <div class="card">
+                    <img src="badmin.jpeg" alt="badminton" class="mx-auto mb-4">
+                    <h3 class="text-2xl font-semibold">Badminton</h3>
+                    <p class="text-lg mt-2"></p>Badminton is a dynamic and exciting hobby for Catherine. It combines quick reflexes and strategic play, making it both challenging and fun. Playing badminton allows her to stay active, improve her agility, and enjoy friendly competition with others.</p>
+                </div>
+            </div>
+        </div>
+                    <center>
+            <div class="inline-flex" style="margin-top:15%;">
+  <a href="intro.html"><button class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-l">
+    Prev
+  </button></a>
+  <a href="intro5.html"><button class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-r">
+    Next
+  </button></a>
+</div>
+</center>
+    </section>
+
+    <footer class="bg-gray-800 p-4 text-center">
+        <p class="text-gray-400"> @Vannwhocares</p>
+    </footer>
+
+    <script>
+        const slides = document.querySelectorAll('.slider .slide');
+        let currentSlide = 0;
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.remove('active');
+                if (i === index) {
+                    slide.classList.add('active');
+                }
+            });
+        }
+
+        document.getElementById('next-slide').addEventListener('click', () => {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        });
+
+        document.getElementById('prev-slide').addEventListener('click', () => {
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            showSlide(currentSlide);
+        });
+
+        // Initialize slider
+        showSlide(currentSlide);
+
+        // Automatic slide change
+        setInterval(() => {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }, 5000); // Change slide every 5 seconds
+
+        // Initialize Typed.js
+        var typed = new Typed(".typed-1", {
+            strings: ["Catherine Meliani"],
+            typeSpeed: 100,
+            backSpeed: 20,
+            loop: false
+        });
+        
+        document.getElementById('scroll-to-hobbies').addEventListener('click', function(event) {
+        event.preventDefault(); // Mencegah aksi default dari tautan
+
+        // Tampilkan bagian Hobbies
+        const hobbiesSection = document.querySelector('#hobbies');
+        hobbiesSection.classList.remove('hidden');
+        
+        // Scroll ke bagian Hobbies
+        hobbiesSection.scrollIntoView({
+            behavior: 'smooth' // Menambahkan efek scroll yang mulus
+        });
+    });
+    </script>
+</body>
+</html>

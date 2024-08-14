@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+
+/* Typography */
+.typing {
+  font-size: 17px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.navbar-name, .navbar-name-1 {
+  font-size: 35px;
+  font-family: 'Ubuntu', sans-serif;
+  color: black;
+  font-weight: 800;
+}
+
+.own-h1-1 {
+  font-size: 125px;
+  margin-top: 50px;
+  margin-left: 25px;
+  font-family: 'Oswald', sans-serif;
+}
+
+.spacediv {
+  margin-top: 40px;
+}
+
+.own-h1-2 {
+  font-family: 'Ubuntu', sans-serif;
+  margin-top: 30px;
+  position: absolute;
+}
+
+.navbar-expand-lg.bg-body-tertiary {
+  width: 100%;
+}
+
+.reveal-test {
+  visibility: hidden;
+}
+
+.home-intro {
+  margin-top: 5%;
+  margin-bottom: 10%;
+}
+
+.text1 {
+  font-size: 60px;
+  font-weight: 800;
+  color: #6F756F;
+  font-family: 'Ubuntu', sans-serif;
+  text-align:center;
+}
+
+.reveal1 {
+  font-size: 30px;
+  font-weight: bold;
+  text-align:center;
+}
+
+/* Slideshow */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+.mySlides {
+  display: none;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+ .reveal1 {
+   visibility: hidden;
+   font-family: 'Ubuntu', sans-serif;
+   color:white;
+ }
+ .img-group-me {
+   display: flex;
+   justify-content:center;
+   gap: 10px;
+ }
+ 
+ .img1-style {
+   visibility:hidden;
+   border:4px;
+ }
+ .img2-style {
+   visibility:hidden;
+   border:4px;
+ }
+ .img3-style {
+   visibility:hidden;
+   border:4px;
+ }
+ .jovanhanderson {
+   visibility:hidden;
+   text-align: center;
+   font-family: 'Ubuntu', sans-serif;
+   font-weight: 800;
+   font-size: 30px;
+ }
+ .home-heading {
+   background: black;
+ }
+ .typed-1-style {
+   color:white;
+ }
+ @keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.slide-in {
+    animation: slideIn 0.5s ease-in-out;
+}
+/* Animation for page transition */
+.page-transition {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.page-transition.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}

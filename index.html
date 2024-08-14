@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Page</title>
+    <link rel="stylesheet" href="test.css">
+</head>
+<<body>
+    <nav>
+        <ul>
+            <li><a href="home.html">Introduction</a></li>
+            <li><a href="#">About This Web</a></li>
+            <li><a href="https://v4n.netlify.app">My Main Web</a></li>
+        </ul>
+    </nav>
+
+    <section class="landing">
+        <div class="half half-pink"></div>
+        <div class="half half-green"></div>
+        <div class="card">
+            <span class="welcome">Welcome to</span>
+            <span class="title">Vann's</span>
+        </div>
+        <div class="particle-container"></div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Partikel Berkilau
+            const numParticles = 100;
+            const particleContainer = document.querySelector('.particle-container');
+            
+            for (let i = 0; i < numParticles; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.top = `${Math.random() * 100}vh`;
+                particle.style.left = `${Math.random() * 100}vw`;
+                particle.style.width = `${Math.random() * 10 + 5}px`;
+                particle.style.height = particle.style.width;
+                particle.style.opacity = Math.random();
+                particle.style.animationDelay = `${Math.random() * 2}s`;
+                particleContainer.appendChild(particle);
+            }
+        });
+    </script>
+</body>
+</html>
